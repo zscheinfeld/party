@@ -1,0 +1,21 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;     
+}
+
+
+
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:yellow;
+    font-family: swear-display, serif;  
+    font-weight: 600;
+    font-style: italic;
+    font-size: 56px;
+
+}
