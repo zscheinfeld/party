@@ -18,6 +18,10 @@
     src: url("/GoodSans-Regular.otf") format("opentype");
   }
 
+.nav-center{
+    display: block;
+}
+
 .wildcard-close-container{
     position: fixed;
     display: flex;
@@ -199,23 +203,20 @@ align-items: center;
     --animation-left-1: 20vw; 
     --animation-rotation-1: 20deg; 
 
- 
     --animation-scale-2: 50%; 
     --animation-top-2: 20vh; 
     --animation-left-2: 20vw; 
     --animation-rotation-2: 20deg; 
 
-
     --animation-scale-3: 50%; 
     --animation-top-3: 20vh; 
     --animation-left-3: 20vw; 
     --animation-rotation-3: 20deg; 
- 
+
     --animation-scale-4: 50%; 
     --animation-top-4: 20vh; 
     --animation-left-4: 20vw; 
     --animation-rotation-4: 20deg; 
-
 
     --animation-scale-5: 50%; 
     --animation-top-5: 20vh; 
@@ -451,7 +452,6 @@ align-items: center;
     overflow-y: hidden;
     margin-left: -20px;
     padding-left: 40px;
-     
 }
 
 .border-top img{
@@ -1102,6 +1102,295 @@ a:hover{
     /* position: absolute; */
     z-index: 200;
 }
+
+
+@media only screen and (max-width: 720px) {
+
+    .cursor{
+        display: none;
+    }
+
+    .background-jenna{
+        transition: background-color .7s ease-in-out;
+        z-index: -10;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        background: white;
+    }
+
+    .header-jenna-oppacity{
+        background-color: transparent;
+        position: fixed;
+        width: 100%;
+        top: 90px;
+        padding-top: 30px;
+        font-family: Opposit;
+        font-size: 80px;
+        color: transparent;
+        padding-bottom: 20px;
+        z-index: 1;
+    }
+
+    .header-jenna-bg{
+        position: fixed;
+        width: 100%;
+        top: 90px;
+        padding-top: 30px;
+        font-family: Opposit;
+        font-size: 80px;
+        color: transparent;
+        padding-bottom: 20px;
+        background: transparent;
+    }
+
+    .nav-container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: 90px;
+        padding-top: 25px;
+        gap: 20px;
+        background-color: white;
+        z-index: 90;
+    }
+
+    .nav-container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        height: 60px;
+        padding-top: 15px;
+        gap: 8px;
+        background-color: white;
+        z-index: 90;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 0px;
+        width: 100vw;
+        height: 65px;
+        gap: 8px;
+        background-color: white;
+        z-index: 3;
+    }
+
+.header{
+    position: sticky;
+    top: 90px;
+    padding-top: 30px;
+    font-family: Opposit;
+    font-size: 36px;
+    color: #FF0000;
+    background-color: white;
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+
+    .footer-right{
+        padding-right: 0px;
+        padding-bottom: 20px;
+        display: flex;
+        gap:10px;
+    }
+
+    .footer{
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100vw;
+        z-index: 3;
+    
+    }
+
+    .countdown-text{
+        font-family: Good Sans;
+        color: #FF0000;
+        font-size: 16px;
+    }
+    
+    .countdown-number{
+        font-family: Opposit;
+        color: #FF0000;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .nav-left{
+        display: none;
+    }
+
+    .nav-right{
+        display: none;
+    }
+
+
+    .nav{
+        font-family: Opposit;
+        font-size: 18px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        color: #FF0000;
+        background-color: white;
+        padding-right: 30px;
+        padding-left: 15px;
+    }
+
+    :root {
+        --sliceno: 8;
+        --wheelheight: 70vw;
+        --radius: calc(70vw / 2);
+        --circumfrance: calc(6.283185307 * var(--radius));
+        --sliceheight: calc(30px + var(--circumfrance) / var(--sliceno));
+        --sliceoffset: calc((var(--sliceheight) / 2) + 0px);
+    
+        --animation-scale-1: 50%; 
+        --animation-top-1: 20vh; 
+        --animation-left-1: 20vw; 
+        --animation-rotation-1: 20deg; 
+        
+        --animation-scale-2: 50%; 
+        --animation-top-2: 20vh; 
+        --animation-left-2: 20vw; 
+        --animation-rotation-2: 20deg; 
+    
+        --animation-scale-3: 50%; 
+        --animation-top-3: 20vh; 
+        --animation-left-3: 20vw; 
+        --animation-rotation-3: 20deg; 
+    
+        --animation-scale-4: 50%; 
+        --animation-top-4: 20vh; 
+        --animation-left-4: 20vw; 
+        --animation-rotation-4: 20deg; 
+    
+        --animation-scale-5: 50%; 
+        --animation-top-5: 20vh; 
+        --animation-left-5: 20vw; 
+        --animation-rotation-5: 20deg; 
+    
+        --animation-scale-6: 50%; 
+        --animation-top-6: 20vh; 
+        --animation-left-6: 20vw; 
+        --animation-rotation-6: 20deg; 
+    
+        --animation-scale-7: 50%; 
+        --animation-top-7: 20vh; 
+        --animation-left-7: 20vw; 
+        --animation-rotation-7: 20deg; 
+    
+        --animation-scale-8: 50%; 
+        --animation-top-8: 20vh; 
+        --animation-left-8: 20vw; 
+        --animation-rotation-8: 20deg; 
+    
+        --animation-scale-9: 50%; 
+        --animation-top-9: 20vh; 
+        --animation-left-9: 20vw; 
+        --animation-rotation-9: 20deg; 
+    
+        --animation-scale-10: 50%; 
+        --animation-top-10: 20vh; 
+        --animation-left-10: 20vw; 
+        --animation-rotation-10: 20deg; 
+    
+        --animation-scale-11: 50%; 
+        --animation-top-11: 20vh; 
+        --animation-left-11: 20vw; 
+        --animation-rotation-11: 20deg; 
+    
+        --animation-scale-12: 50%; 
+        --animation-top-12: 20vh; 
+        --animation-left-12: 20vw; 
+        --animation-rotation-12: 20deg; 
+    
+        --animation-scale-13: 50%; 
+        --animation-top-13: 20vh; 
+        --animation-left-13: 20vw; 
+        --animation-rotation-13: 20deg; 
+    
+        --animation-scale-14: 50%; 
+        --animation-top-14: 20vh; 
+        --animation-left-14: 20vw; 
+        --animation-rotation-14: 20deg;
+    
+        --animation-scale-15: 50%; 
+        --animation-top-15: 20vh; 
+        --animation-left-15: 20vw; 
+        --animation-rotation-15: 20deg;
+      }
+    .wheel-container{
+        position: static;
+        top: 90px;
+        left: 0px;
+        z-index: 5;
+        height: calc(50vh - 180px);
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25vh;
+        }
+
+    .big-container{
+        padding-top: calc(50vh - 90px);
+        display:flex;
+        justify-content: center;
+    }
+
+    .label {
+        font-family: Opposit;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        line-height:  calc(var(--sliceheight) - 10px);
+        padding-top: 1px;
+        padding-right:25px;
+        padding-bottom: 1px;
+        font-size: 16px;
+        text-align: right;
+        padding-left: 40px;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+    .column{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    p{
+        overflow: hidden;
+        font-family: Good Sans;
+        color: #FF0000;
+        font-size: 16px;
+        padding-bottom: 20px;
+        max-width: 700px;
+        line-height: 130%;
+    }
+
+    .border-top{
+        width: 100vw;
+        height: 15px;
+        margin-left: -20px;
+        padding-left: 40px;
+    }
+
+  }
 
 
 
