@@ -1,0 +1,1107 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    cursor:none !important;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@font-face {
+    font-family: "Opposit";
+    src: url("/Opposit-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Good Sans";
+    src: url("/GoodSans-Regular.otf") format("opentype");
+  }
+
+.wildcard-close-container{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    bottom: 100px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+}
+.wildcard-close{
+    display: none;
+    text-align: center;
+    color: #FF0000;
+    border: solid 2px #FF0000;
+    font-family: Opposit;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 26px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.wildcard-close:hover{
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    font-family: Opposit;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 26px;
+    background-color: #FF0000;
+    z-index: 1000;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 90px;
+    padding-top: 25px;
+    gap: 20px;
+    background-color: white;
+    z-index: 90;
+}
+
+.nav{
+    font-family: Opposit;
+    font-size: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    color: #FF0000;
+    background-color: white;
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+.jenna-nav{
+ transition: background-color .7s ease-in-out;
+ background-color:rgba(255,208,231,1);
+}
+
+.background-jenna{
+    transition: background-color .7s ease-in-out;
+    z-index: -10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+}
+
+
+.background-jenna-on-opacity{
+    transition: opacity .7s ease-in-out;
+    opacity: 0%;
+}
+
+
+.background-jenna-on{
+    transition: background-color .7s ease-in-out;
+    z-index: -11;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(246,232,110);
+    background: linear-gradient(0deg, rgba(246,232,110,1) 0%, rgba(255,208,231,1) 100%);
+}
+
+
+.nav-left{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@keyframes wordrotate{
+    0%{  -webkit-transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    25%{  -webkit-transform: rotate(15deg);
+        transform-origin: center;
+    }
+
+    50%{  -webkit-transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    75%{  -webkit-transform: rotate(-15deg);
+        transform-origin: center;
+    }
+
+    100%{  -webkit-transform: rotate(0deg);
+        transform-origin: center;
+    }
+}
+
+
+.nav-right{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+.nav-right:hover{
+ transform-origin: center;
+ color: black;
+ scale: 1.15;
+ transition: scale .1s ease-in-out;
+ animation: wordrotate .2s ease-in-out infinite;
+}
+
+.nav-left:hover{
+    transform-origin: center;
+    color: black;
+    scale: 1.15;
+    transition: scale .1s ease-in-out;
+    animation: wordrotate .2s ease-in-out infinite;
+   }
+   
+
+
+
+.wheel-container{
+position: fixed;
+top: 90px;
+left: 0px;
+z-index: 5;
+height: calc(100vh - 180px);
+width: 50vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+:root {
+    --sliceno: 8;
+    --wheelheight: 35vw;
+    --radius: calc(35vw / 2);
+    --circumfrance: calc(6.283185307 * var(--radius));
+    --sliceheight: calc(30px + var(--circumfrance) / var(--sliceno));
+    --sliceoffset: calc((var(--sliceheight) / 2) + 0px);
+
+    --animation-scale-1: 50%; 
+    --animation-top-1: 20vh; 
+    --animation-left-1: 20vw; 
+    --animation-rotation-1: 20deg; 
+
+ 
+    --animation-scale-2: 50%; 
+    --animation-top-2: 20vh; 
+    --animation-left-2: 20vw; 
+    --animation-rotation-2: 20deg; 
+
+
+    --animation-scale-3: 50%; 
+    --animation-top-3: 20vh; 
+    --animation-left-3: 20vw; 
+    --animation-rotation-3: 20deg; 
+ 
+    --animation-scale-4: 50%; 
+    --animation-top-4: 20vh; 
+    --animation-left-4: 20vw; 
+    --animation-rotation-4: 20deg; 
+
+
+    --animation-scale-5: 50%; 
+    --animation-top-5: 20vh; 
+    --animation-left-5: 20vw; 
+    --animation-rotation-5: 20deg; 
+
+    --animation-scale-6: 50%; 
+    --animation-top-6: 20vh; 
+    --animation-left-6: 20vw; 
+    --animation-rotation-6: 20deg; 
+
+    --animation-scale-7: 50%; 
+    --animation-top-7: 20vh; 
+    --animation-left-7: 20vw; 
+    --animation-rotation-7: 20deg; 
+
+    --animation-scale-8: 50%; 
+    --animation-top-8: 20vh; 
+    --animation-left-8: 20vw; 
+    --animation-rotation-8: 20deg; 
+
+    --animation-scale-9: 50%; 
+    --animation-top-9: 20vh; 
+    --animation-left-9: 20vw; 
+    --animation-rotation-9: 20deg; 
+
+    --animation-scale-10: 50%; 
+    --animation-top-10: 20vh; 
+    --animation-left-10: 20vw; 
+    --animation-rotation-10: 20deg; 
+
+    --animation-scale-11: 50%; 
+    --animation-top-11: 20vh; 
+    --animation-left-11: 20vw; 
+    --animation-rotation-11: 20deg; 
+
+    --animation-scale-12: 50%; 
+    --animation-top-12: 20vh; 
+    --animation-left-12: 20vw; 
+    --animation-rotation-12: 20deg; 
+
+    --animation-scale-13: 50%; 
+    --animation-top-13: 20vh; 
+    --animation-left-13: 20vw; 
+    --animation-rotation-13: 20deg; 
+
+    --animation-scale-14: 50%; 
+    --animation-top-14: 20vh; 
+    --animation-left-14: 20vw; 
+    --animation-rotation-14: 20deg;
+
+    --animation-scale-15: 50%; 
+    --animation-top-15: 20vh; 
+    --animation-left-15: 20vw; 
+    --animation-rotation-15: 20deg;
+  }
+
+
+  @keyframes wheelrotation {
+      0%{
+        transform: rotate(0deg);
+      }
+
+     100% {
+        transform: rotate(723deg);
+      }
+  }
+
+
+.wheel{
+    position: absolute;
+    height: var(--wheelheight);
+    width: var(--wheelheight);
+    max-height: calc(100vh - 250px);
+    max-width: calc(100vh - 250px);
+    background-color: transparent;
+    border-radius: 100%;
+    overflow: hidden;
+    /* animation: wheelrotation 1.5s  ease-in-out 1 forwards; */
+    /* transition: transform;
+    transform: rotate(363deg);
+    transition-timing-function: ease-in-out; */
+}
+
+.center{
+    z-index: 160;
+    position: absolute;
+    height: 12%;
+    width: 12%;
+    background-color: rgb(255, 255, 255);
+    top: calc(50% - 6%);
+    left: calc(50% - 6%);
+    border-radius: 100%;
+    transform-origin: center;
+}
+
+.slice{
+		z-index: 150;
+		position: absolute;
+		top: calc(50% - var(--sliceoffset));
+		height: var(--sliceheight);
+		left: 50%;
+		width: 50%;
+        color: white;
+		text-align: right;
+		padding-right: 0px;
+		display: block;
+        transform-origin: left center;
+}
+
+.label {
+    font-family: Opposit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    line-height:  calc(var(--sliceheight) - 10px);
+    padding-top: 1px;
+    padding-right:25px;
+    padding-bottom: 1px;
+    font-size: 26px;
+    text-align: right;
+    padding-left: 0px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.label-yellow {
+    color: black;
+}
+
+.label-pink {
+    color: #FF0000;
+}
+
+.label-blue{
+    color: black;
+}
+
+.slice::before{
+    content: "";
+	display: block;
+	width: 0;
+	height: 0;
+    border-style: solid;
+    margin-bottom: -1px;
+	margin-top: -2px;
+	border-width: 0 0 var(--sliceoffset) var(--radius);
+	border-color: transparent transparent #85CEF2  transparent;
+   
+}
+
+.slice::after{
+    content: "";
+	display: block;
+	width: 0;
+	height: 0;
+    border-style: solid;
+    margin-bottom: -1px;
+	margin-top: -2px;
+	border-width: 0 var(--radius) var(--sliceoffset) 0;
+	border-color: transparent #85CEF2 transparent  transparent;
+}
+
+.slice:hover::before{
+    content: "";
+	display: block;
+	width: 0;
+	height: 0;
+    border-style: solid;
+    margin-bottom: -1px;
+	margin-top: -2px;
+	border-width: 0 0 var(--sliceoffset) var(--radius);
+	border-color: transparent transparent black transparent;
+   
+}
+
+.slice:hover::after{
+    content: "";
+	display: block;
+	width: 0;
+	height: 0;
+    border-style: solid;
+    margin-bottom: -1px;
+	margin-top: -2px;
+	border-width: 0 var(--radius) var(--sliceoffset) 0;
+	border-color: transparent black transparent  transparent;
+}
+
+
+
+.footer{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100vw;
+    z-index: 3;
+
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 90px;
+    gap: 20px;
+    background-color: white;
+    z-index: 3;
+}
+
+.footer-jenna{
+    transition: background-color .7s ease-in-out;
+    background-color:rgb(246,232,110);
+    z-index: 3;
+}
+
+
+.footer-right{
+    padding-right: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    gap:10px;
+}
+
+.border-top{
+    width: 100vw;
+    height: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -20px;
+    padding-left: 40px;
+     
+}
+
+.border-top img{
+    height: 100%;
+}
+
+.big-container{
+    padding-top:120px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+
+.column{
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header{
+    position: sticky;
+    top: 90px;
+    padding-top: 30px;
+    font-family: Opposit;
+    font-size: 80px;
+    color: #FF0000;
+    background-color: transparent;
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+p{
+    overflow: hidden;
+    font-family: Good Sans;
+    color: #FF0000;
+    font-size: 18px;
+    padding-bottom: 20px;
+    max-width: 700px;
+    line-height: 130%;
+}
+
+.countdown-text{
+    font-family: Good Sans;
+    color: #FF0000;
+    font-size: 18px;
+}
+
+.countdown-number{
+    font-family: Opposit;
+    color: #FF0000;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.timer-element{
+    display: flex;
+    gap:5px;
+}
+
+
+
+.section{
+    min-height: 100vh;
+}
+
+.wheel :nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.wheel :nth-child(2)::after {
+    border-color: transparent #EFC3D8 transparent  transparent;
+}
+
+.wheel :nth-child(2)::before {
+    border-color: transparent transparent #EFC3D8 transparent;
+}
+
+.wheel :nth-child(2):hover::after {
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(2):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+.wheel :nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.wheel :nth-child(3)::after {
+    border-color: transparent #FFF36E transparent  transparent;
+}
+
+.wheel :nth-child(3):hover:after {
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(3)::before {
+    border-color: transparent transparent #FFF36E transparent;
+}
+
+.wheel :nth-child(3):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+.wheel :nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.wheel :nth-child(4)::after {
+    border-color: transparent #FF0000 transparent  transparent;
+}
+
+.wheel :nth-child(4)::before {
+    border-color: transparent transparent #FF0000 transparent;
+}
+
+.wheel :nth-child(4):hover::after {
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(4):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+.wheel :nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.wheel :nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.wheel :nth-child(6)::after {
+    border-color: transparent #EFC3D8 transparent  transparent;
+}
+
+.wheel :nth-child(6):hover::after{
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(6)::before {
+    border-color: transparent transparent #EFC3D8 transparent;
+}
+
+.wheel :nth-child(6):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+
+.wheel :nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.wheel :nth-child(7)::after {
+    border-color: transparent #FFF36E transparent  transparent;
+}
+
+.wheel :nth-child(7)::before {
+    border-color: transparent transparent #FFF36E transparent;
+}
+
+.wheel :nth-child(7):hover::after {
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(7):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+.wheel :nth-child(8) {
+    transform: rotate(315deg);
+}
+
+.wheel :nth-child(8)::after {
+    border-color: transparent #FF0000 transparent  transparent;
+}
+
+.wheel :nth-child(8)::before {
+    border-color: transparent transparent #FF0000 transparent;
+}
+
+.wheel :nth-child(8):hover::after {
+    border-color: transparent black transparent  transparent;
+}
+
+.wheel :nth-child(8):hover::before {
+    border-color: transparent transparent black transparent;
+}
+
+
+  .cursor{
+    pointer-events: none;
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    font-family: "beastly", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    z-index: 1001;
+  }
+
+  .cursor-click{  
+    pointer-events: none;
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    font-family: "beastly", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    z-index: 1001;
+  }
+
+  .cursor-click img{  
+    pointer-events: none;
+    transform-origin: center;
+    scale: 1;
+    transition: scale .05s ease-in-out;
+  }
+
+  .cursor-click img{
+    pointer-events: none;
+    transform-origin: center;
+    scale: .8;
+    transition: scale .05s ease-in-out;
+    
+  }
+
+  /* .slice-hover{
+      background-color: black;
+  } */
+
+  .slice-type-hover{
+    color:white;
+}
+
+
+.slice-schedule-type-hover{
+  color:white;
+}
+
+.header-jenna-oppacity{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 90px;
+    padding-top: 30px;
+    font-family: Opposit;
+    font-size: 80px;
+    color: transparent;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+.header-jenna-bg{
+    position: fixed;
+    width: 100%;
+    top: 90px;
+    padding-top: 30px;
+    font-family: Opposit;
+    font-size: 80px;
+    color: transparent;
+    padding-bottom: 20px;
+    background: #f6d8c7;
+    background: linear-gradient(0deg, #f6d8c7 0%, rgba(255,208,231,1) 100%);
+}
+
+.wildcardpic{
+    position: fixed;
+    height: 400px;
+    top: calc((100vh / 2) - 200px);
+    left: calc((100vw / 2) - 200px);
+    z-index: 100;
+    transform-origin: center;
+    display: none;
+    /* -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: translate(0px, 0px) rotate(0deg); */
+}
+
+/* .wildcardpic-move{
+    transform: translate(150px, 150px) rotate(15deg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+} */
+
+@keyframes picmove1 {
+    0%{
+        scale: var(--animation-scale-1);
+        top: calc((100vh / 2) - 200px);
+        left: calc((100vw / 2) - 200px);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-1), var(--animation-top-1)) rotate(var(--animation-rotation-1));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-1-start{
+    animation: picmove1 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove2 {
+    0%{
+        scale: var(--animation-scale-2);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-2), var(--animation-top-2)) rotate(var(--animation-rotation-2));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-2-start{
+    animation: picmove2 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+
+
+@keyframes picmove3 {
+    0%{
+        scale: var(--animation-scale-3);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-3), var(--animation-top-3)) rotate(var(--animation-rotation-3));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-3-start{
+    animation: picmove3 .4s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+
+
+
+@keyframes picmove4 {
+    0%{
+        scale: var(--animation-scale-4);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-4), var(--animation-top-4)) rotate(var(--animation-rotation-4));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-4-start{
+    animation: picmove4 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+
+@keyframes picmove5 {
+    0%{
+        scale: var(--animation-scale-5);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-5), var(--animation-top-5)) rotate(var(--animation-rotation-5));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-5-start{
+    animation: picmove5 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove6 {
+    0%{
+        scale: var(--animation-scale-6);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-6), var(--animation-top-6)) rotate(var(--animation-rotation-6));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-6-start{
+    animation: picmove6 .4s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove7 {
+    0%{
+        scale: var(--animation-scale-7);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-7), var(--animation-top-7)) rotate(var(--animation-rotation-7));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-7-start{
+    animation: picmove7 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove8 {
+    0%{
+        scale: var(--animation-scale-8);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-8), var(--animation-top-8)) rotate(var(--animation-rotation-8));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-8-start{
+    animation: picmove8 .3s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove9 {
+    0%{
+        scale: var(--animation-scale-9);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-9), var(--animation-top-9)) rotate(var(--animation-rotation-9));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-9-start{
+    animation: picmove9 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove10 {
+    0%{
+        scale: var(--animation-scale-10);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-10), var(--animation-top-10)) rotate(var(--animation-rotation-10));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-10-start{
+    animation: picmove10 .3s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove11 {
+    0%{
+        scale: var(--animation-scale-11);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-11), var(--animation-top-11)) rotate(var(--animation-rotation-11));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-11-start{
+    animation: picmove11 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove12 {
+    0%{
+        scale: var(--animation-scale-12);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-12), var(--animation-top-12)) rotate(var(--animation-rotation-12));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-12-start{
+    animation: picmove12 .4s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove13 {
+    0%{
+        scale: var(--animation-scale-13);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-13), var(--animation-top-13)) rotate(var(--animation-rotation-13));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-13-start{
+    animation: picmove13 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove14 {
+    0%{
+        scale: var(--animation-scale-14);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-14), var(--animation-top-14)) rotate(var(--animation-rotation-14));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-14-start{
+    animation: picmove14 .3s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+@keyframes picmove15 {
+    0%{
+        scale: var(--animation-scale-15);
+        transform: translate(0px, 0px) rotate(0deg);
+        transform-origin: center;
+    }
+
+    100%{
+        scale: 100%;
+        transform: translate(var(--animation-left-15), var(--animation-top-15)) rotate(var(--animation-rotation-15));
+        transform-origin: center;
+    }
+}
+
+.wildcardpic-move-15-start{
+    animation: picmove15 .2s ease-in-out 1 forwards;
+    transform-origin: center;
+}
+
+
+
+.wildcardpic img{
+    height: 100%;
+}
+
+.link{
+    /* display: inline; */
+    overflow: visible;
+  
+
+}
+
+.link:hover{
+    display: inline-block;
+    transform-origin: center;
+    transition: scale .1s ease-in-out;
+    animation: wordrotate .2s ease-in-out infinite;
+    overflow: visible;
+}
+
+.subhead{
+color: #FF0000;
+font-family: Opposit;
+font-size: 28px;
+padding-bottom: 10px;
+padding-top: 10px;
+
+}
+
+a{
+    color: black;
+    text-decoration: #FF0000 wavy underline;
+    /* text-decoration: none; */
+    text-decoration-skip-ink: none;
+    height: 2em;
+    font-family: Good Sans;
+    font-size: 18px;
+    line-height: 130%;
+    overflow: visible;
+}
+
+a:hover{
+    color: black;
+    /* background-color: #85CEF2; */
+    text-decoration: #FF0000 wavy underline;
+    text-decoration-skip-ink: none;
+    height: 2em;
+    overflow: visible;
+}
+
+.arrow-down{
+    padding-top: 1%;
+    top: 0px;
+    position: absolute;
+    /* background-color: black; */
+    height: 4.5%;
+    width: 4.5%;
+    z-index: 200;
+
+}
+
+.arrow-down img{
+    width: 100%;
+    /* position: absolute; */
+    z-index: 200;
+}
+
+
+
