@@ -186,22 +186,22 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
     var cursor = $(".cursor");
 
-    $(window).mousemove(function(e) {
-        cursor.css({
-            top: e.clientY - cursor.height() / 2,
-            left: e.clientX - cursor.width() / 2
-        });
-    });
+    // $(window).mousemove(function(e) {
+    //     cursor.css({
+    //         top: e.clientY - cursor.height() / 2,
+    //         left: e.clientX - cursor.width() / 2
+    //     });
+    // });
 
-    $("div").mousedown(function(){
-        // $(".cursor-type").attr("src", "img/Cursor-Rainbow-3.svg")
-        $(".cursor").addClass("cursor-click")
-      });
+    // $("div").mousedown(function(){
+    //     // $(".cursor-type").attr("src", "img/Cursor-Rainbow-3.svg")
+    //     $(".cursor").addClass("cursor-click")
+    //   });
 
-    $("div").mouseup(function(){
-        // $(".cursor-type").attr("src", "img/Cursor-Black.svg")
-        $(".cursor").removeClass("cursor-click")
-      });
+    // $("div").mouseup(function(){
+    //     // $(".cursor-type").attr("src", "img/Cursor-Black.svg")
+    //     $(".cursor").removeClass("cursor-click")
+    //   });
 
 
       $(".welcome").hover(function(){

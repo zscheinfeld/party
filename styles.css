@@ -2,10 +2,10 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    cursor:none !important;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    /* cursor:none !important; */
+    -webkit-user-select: none !important; /* Safari */
+    -ms-user-select: none !important; /* IE 10 and IE 11 */
+    user-select: none !important; /* Standard syntax */
 }
 
 @font-face {
@@ -328,6 +328,7 @@ align-items: center;
 }
 
 .label {
+    cursor: pointer;
     font-family: Opposit;
     position: absolute;
     top: 0;
@@ -340,9 +341,9 @@ align-items: center;
     font-size: 26px;
     text-align: right;
     padding-left: 0px;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none !important;/* Safari */
+    -ms-user-select: none !important; /* IE 10 and IE 11 */
+    user-select: none !important; /* Standard syntax */
 }
 
 .label-yellow {
@@ -1228,10 +1229,12 @@ a:hover{
 
     .nav-left{
         display: none;
+        cursor: pointer;
     }
 
     .nav-right{
         display: none;
+        cursor: pointer;
     }
 
 
