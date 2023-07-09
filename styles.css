@@ -127,6 +127,7 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    cursor: pointer;
 }
 
 @keyframes wordrotate{
@@ -156,6 +157,7 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    cursor: pointer;
 }
 
 
@@ -1229,12 +1231,12 @@ a:hover{
 
     .nav-left{
         display: none;
-        cursor: pointer;
+
     }
 
     .nav-right{
         display: none;
-        cursor: pointer;
+       
     }
 
 
