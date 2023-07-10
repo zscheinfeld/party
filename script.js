@@ -204,24 +204,25 @@ function scale (number, inMin, inMax, outMin, outMax) {
     //   });
 
 
-      $(".welcome").hover(function(){
-        $(this).children().addClass("slice-type-hover");
-        $(this).children().before().addClass("slice-hover");
-        $(this).children().after().addClass("slice-hover");
+      // $(".welcome").hover(function(){
+      //   $(this).children().addClass("slice-type-hover");
+      //   $(this).children().before().addClass("slice-hover");
+      //   $(this).children().after().addClass("slice-hover");
 
-        }, function(){
-        $(this).children().removeClass("slice-type-hover");
-        $(this).children().before().removeClass("slice-hover");
-        $(this).children().after().removeClass("slice-hover");
-      });
+      //   }, function(){
+      //   $(this).children().removeClass("slice-type-hover");
+      //   $(this).children().before().removeClass("slice-hover");
+      //   $(this).children().after().removeClass("slice-hover");
+      // });
 
-      $(".slice").hover(function(){
-        $(this).children().addClass("slice-type-hover");
-        }, function(){
-        $(this).children().removeClass("slice-type-hover");
-        // $(this).children().before().removeClass("slice-schedule-hover-b");
-        // $(this).children().after().removeClss("slice-schedule-hover-a");
-      });
+      // $(".label").hover(function(){
+      //   console.log("hover")
+      //   $(this).addClass("label-hover");
+      //   }, function(){
+      //   // $(this).children().removeClass("slice-type-hover");
+      //   // $(this).children().before().removeClass("slice-schedule-hover-b");
+      //   // $(this).children().after().removeClss("slice-schedule-hover-a");
+      // });
 
       var jennaon = 0
 
