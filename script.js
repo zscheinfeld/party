@@ -374,6 +374,11 @@ function scale (number, inMin, inMax, outMin, outMax) {
         // $(".wildcardpic:nth-child(3)").removeClass("wildcardpic-move")
       })
 
-      
+      var width = $(window).width();
+      var wheeltop = $(".intro").height() + $(".nav-container").height() + 30
+      if (width < 720){
+        console.log("helll" + wheeltop)
+        $(".wheel-container").css('top',`${wheeltop}px`) 
+      }
 
 });

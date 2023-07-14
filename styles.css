@@ -1119,7 +1119,6 @@ a:hover{
     height: 4.5%;
     width: 4.5%;
     z-index: 200;
-
 }
 
 .arrow-down img{
@@ -1130,6 +1129,10 @@ a:hover{
 
 
 @media only screen and (max-width: 720px) {
+
+    .arrow-down{
+        display: none;
+    }
 
     .cursor{
         display: none;
@@ -1205,19 +1208,19 @@ a:hover{
         height: 65px;
         gap: 8px;
         background-color: white;
-        z-index: 3;
+        z-index: 200;
     }
 
 .header{
     position: sticky;
-    top: 90px;
-    padding-top: 30px;
+    top: 60px;
+    padding-top: 15px;
     font-family: Opposit;
-    font-size: 36px;
+    font-size: 54px;
     color: #FF0000;
     background-color: white;
-    padding-bottom: 20px;
-    z-index: 2;
+    padding-bottom: 16px;
+    z-index: 0;
 }
 
 
@@ -1234,8 +1237,7 @@ a:hover{
         justify-content: center;
         align-items: flex-end;
         width: 100vw;
-        z-index: 3;
-    
+        z-index: 200;
     }
 
     .countdown-text{
@@ -1276,8 +1278,8 @@ a:hover{
 
     :root {
         --sliceno: 8;
-        --wheelheight: 70vw;
-        --radius: calc(70vw / 2);
+        --wheelheight: 60vw;
+        --radius: calc(60vw / 2);
         --circumfrance: calc(6.283185307 * var(--radius));
         --sliceheight: calc(30px + var(--circumfrance) / var(--sliceno));
         --sliceoffset: calc((var(--sliceheight) / 2) + 0px);
@@ -1358,20 +1360,21 @@ a:hover{
         --animation-rotation-15: 20deg;
       }
     .wheel-container{
-        position: static;
-        top: 90px;
+        position: relative;
+        top: 0px;
         left: 0px;
         z-index: 5;
-        height: calc(50vh - 180px);
+        height: calc(50vh - 150px);
         width: 100vw;
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding-top: 25vh;
+        align-items: flex-start;
         }
 
     .big-container{
-        padding-top: calc(50vh - 90px);
+        position: absolute;
+        top: 60px;
+        padding-top: 0;
         display:flex;
         justify-content: center;
     }
@@ -1405,7 +1408,7 @@ a:hover{
         font-family: Good Sans;
         color: #FF0000;
         font-size: 16px;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
         max-width: 700px;
         line-height: 130%;
     }
