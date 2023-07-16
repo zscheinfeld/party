@@ -283,7 +283,7 @@ align-items: center;
       }
 
      100% {
-        transform: rotate(723deg);
+        transform: rotate(720deg);
       }
   }
 
@@ -305,8 +305,7 @@ align-items: center;
 }
 
 .wheel-spin{
-    transform: rotate(720deg);
-    transition: transform ease-in-out 1.5s;
+    animation: wheelrotation 1.5s ease-in-out 1 forwards;
 }
 
 .center{
