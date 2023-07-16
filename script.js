@@ -173,6 +173,8 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
 
     $(document).scroll(function(){
+
+      $(".wheel").removeClass("wheel-spin")
       // console.log($(window).scrollTop())
       if ($(window).scrollTop() < welcomheight){
         console.log("welcome")
