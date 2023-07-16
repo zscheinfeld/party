@@ -93,21 +93,44 @@ function scale (number, inMin, inMax, outMin, outMax) {
     
 
     function newimgplacement(){
-      imgarrayshuff = shuffle(imgarray)
-      for (x=0; x <15; x++){
-        $(`.img${x}`).children().attr('src', `wildcard/0${imgarrayshuff[x]}.png`)
-        varleft = randomIntFromInterval(-40, 40);
-        imageroot.style.setProperty(`--animation-left-${x}`, varleft +'vw');
+      
+      if (width < 720){
+        imgarrayshuff = shuffle(imgarray)
+        for (x=0; x <15; x++){
+          $(`.img${x}`).children().attr('src', `wildcard/0${imgarrayshuff[x]}.png`)
+          varleft = randomIntFromInterval(-40, 40);
+          imageroot.style.setProperty(`--animation-left-${x}`, varleft +'vw');
+      
+          vartop[x] = randomIntFromInterval(-40, 40);
+          imageroot.style.setProperty(`--animation-top-${x}`, vartop[x] +'vh');
+      
+          varrot[x] = randomIntFromInterval(-45, 45);
+          imageroot.style.setProperty(`--animation-rotation-${x}`, varrot[x] +'deg');
     
-        vartop[x] = randomIntFromInterval(-20, 20);
-        imageroot.style.setProperty(`--animation-top-${x}`, vartop[x] +'vw');
-    
-        varrot[x] = randomIntFromInterval(-45, 45);
-        imageroot.style.setProperty(`--animation-rotation-${x}`, varrot[x] +'deg');
-  
-        varscale[x] = randomIntFromInterval(10, 50);
-        imageroot.style.setProperty(`--animation-scale-${x}`, varscale[x] +'%');
+          varscale[x] = randomIntFromInterval(10, 50);
+          imageroot.style.setProperty(`--animation-scale-${x}`, varscale[x] +'%');
+        }
       }
+      
+      else{
+        imgarrayshuff = shuffle(imgarray)
+        for (x=0; x <15; x++){
+          $(`.img${x}`).children().attr('src', `wildcard/0${imgarrayshuff[x]}.png`)
+          varleft = randomIntFromInterval(-40, 40);
+          imageroot.style.setProperty(`--animation-left-${x}`, varleft +'vw');
+      
+          vartop[x] = randomIntFromInterval(-20, 20);
+          imageroot.style.setProperty(`--animation-top-${x}`, vartop[x] +'vh');
+      
+          varrot[x] = randomIntFromInterval(-45, 45);
+          imageroot.style.setProperty(`--animation-rotation-${x}`, varrot[x] +'deg');
+    
+          varscale[x] = randomIntFromInterval(10, 50);
+          imageroot.style.setProperty(`--animation-scale-${x}`, varscale[x] +'%');
+        }
+      }
+
+
     }
 
     newimgplacement()
