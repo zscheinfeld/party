@@ -297,8 +297,8 @@ align-items: center;
     background-color: transparent;
     border-radius: 100%;
     overflow: hidden;
-    transform: rotate(720deg);
-    transition: transform ease-in-out 1.5s;
+    /* transform: rotate(720deg);
+    transition: transform ease-in-out 1.5s; */
     /* animation: wheelrotation 1.5s  ease-in-out 1 forwards; */
     
     /* transform: rotate(363deg);

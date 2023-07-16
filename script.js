@@ -156,7 +156,8 @@ function scale (number, inMin, inMax, outMin, outMax) {
         sectiontotal = welcomheight
         wheelrot = scale($(window).scrollTop(), 0, sectiontotal, 3, 407)
         console.log(sectiontotal)
-        $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
+        $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0",
+      })
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight){
