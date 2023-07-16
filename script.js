@@ -10,6 +10,23 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
   $(".arrow-down").css("top",`${arrowtop}px`)
 
+  var width = $(window).width();
+  var wheeltop;
+
+  function mobileswitch(){
+  width = $(window).width();
+  wheeltop= $(".intro").height() + $(".nav-container").height() + 30
+    if (width < 720){
+      console.log("helll" + wheeltop)
+      $(".wheel-container").css('top',`${wheeltop}px`) 
+    }
+    else{
+      $(".wheel-container").css('top',`90px`) 
+    }
+  }
+  
+  mobileswitch();
+
   $(window).on('resize', function(){
     wheelheight = $(".wheel").height()
     wheelcontainerheight= $(".wheel-container").height()
@@ -22,6 +39,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
     dressheight = $(".dress-section").prop("scrollHeight")
     registryheight = $(".registry-section").prop("scrollHeight")
     rsvpheight = $(".rsvp-section").prop("scrollHeight")
+    mobileswitch();
 });
   
 
@@ -224,9 +242,10 @@ function scale (number, inMin, inMax, outMin, outMax) {
       //   // $(this).children().after().removeClss("slice-schedule-hover-a");
       // });
 
-      var jennaon = 0
+      var jennaon = 0;
+      var iszach = 0;
 
-      $(".nav-left").click(function(){
+      function bgswitch(){
         if (jennaon == 0){
           $(".nav-container").addClass("jenna-nav")
           $(".nav").addClass("jenna-nav")
@@ -236,7 +255,6 @@ function scale (number, inMin, inMax, outMin, outMax) {
           $(".header-jenna-oppacity").addClass("background-jenna-on-opacity")
           jennaon = 1
         }
-
         else{
           $(".nav-container").removeClass("jenna-nav")
           $(".nav").removeClass("jenna-nav")
@@ -246,6 +264,19 @@ function scale (number, inMin, inMax, outMin, outMax) {
           $(".header-jenna-oppacity").removeClass("background-jenna-on-opacity")
           jennaon = 0
         }
+      }
+
+      $(".nav-left").click(function(){
+        // $(".footer-jenna").css("background-color","rgb(246,232,110)")
+        $(".background-jenna-on").css("background","linear-gradient(0deg, rgba(246,232,110,1) 0%, rgba(255,208,231,1) 100%)")
+        $(".footer-jenna").css("background-color","rgba(246,232,110,1)")
+        bgswitch();
+      });
+
+      $(".nav-right").click(function(){
+        $(".background-jenna-on").css("background","linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(149,255,255,1) 100%)")
+        bgswitch();
+        $(".footer-jenna").css("background-color","rgba(255,255,255,1)")
       });
 
       $(".registry").click(function(){
@@ -374,11 +405,6 @@ function scale (number, inMin, inMax, outMin, outMax) {
         // $(".wildcardpic:nth-child(3)").removeClass("wildcardpic-move")
       })
 
-      var width = $(window).width();
-      var wheeltop = $(".intro").height() + $(".nav-container").height() + 30
-      if (width < 720){
-        console.log("helll" + wheeltop)
-        $(".wheel-container").css('top',`${wheeltop}px`) 
-      }
+
 
 });

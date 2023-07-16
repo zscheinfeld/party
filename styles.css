@@ -297,10 +297,12 @@ align-items: center;
     background-color: transparent;
     border-radius: 100%;
     overflow: hidden;
+    transform: rotate(720deg);
+    transition: transform ease-in-out 1.5s;
     /* animation: wheelrotation 1.5s  ease-in-out 1 forwards; */
-    /* transition: transform;
-    transform: rotate(363deg);
-    transition-timing-function: ease-in-out; */
+    
+    /* transform: rotate(363deg);
+    transition-timing-function: ease-in-out; */ 
 }
 
 .center{
@@ -340,7 +342,7 @@ align-items: center;
     padding-top: 1px;
     padding-right:25px;
     padding-bottom: 1px;
-    padding-left: 0px;
+    padding-left: 20px;
     /* height: 20px; */
     font-family: Opposit;
     font-size: 26px;
@@ -441,7 +443,6 @@ align-items: center;
     align-items: flex-end;
     width: 100vw;
     z-index: 3;
-
 }
 
 .footer-container{
@@ -1127,6 +1128,27 @@ a:hover{
     z-index: 200;
 }
 
+@media only screen and (max-width: 1024px) {
+
+    .label{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        line-height:  calc(var(--sliceheight) - 10px);
+        padding-top: 1px;
+        padding-right:05px;
+        padding-bottom: 1px;
+        padding-left: 25px;
+        /* height: 20px; */
+        font-family: Opposit;
+        font-size: 18px;
+        text-align: right;
+        pointer-events: none;
+    }
+
+}
+
 
 @media only screen and (max-width: 720px) {
 
@@ -1278,8 +1300,8 @@ a:hover{
 
     :root {
         --sliceno: 8;
-        --wheelheight: 60vw;
-        --radius: calc(60vw / 2);
+        --wheelheight: 65vw;
+        --radius: calc(65vw / 2);
         --circumfrance: calc(6.283185307 * var(--radius));
         --sliceheight: calc(30px + var(--circumfrance) / var(--sliceno));
         --sliceoffset: calc((var(--sliceheight) / 2) + 0px);
@@ -1387,11 +1409,10 @@ a:hover{
         width: 100%;
         line-height:  calc(var(--sliceheight) - 10px);
         padding-top: 1px;
-        padding-right:25px;
+        padding-right:20px;
         padding-bottom: 1px;
         font-size: 14px;
         text-align: right;
-        padding-left: 40px;
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
