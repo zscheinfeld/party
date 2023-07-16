@@ -754,11 +754,6 @@ p{
     z-index: 100;
     transform-origin: center;
     display: none;
-    /* -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    transform: translate(0px, 0px) rotate(0deg); */
 }
 
 /* .wildcardpic-move{
@@ -1449,6 +1444,16 @@ a:hover{
 
     .welcome-section{
         min-height: 100vh;
+    }
+
+    .wildcardpic{
+        position: fixed;
+        height: 250px;
+        top: calc((100vh / 2) - 125px);
+        left: calc((100vw / 2) - 125px);
+        z-index: 100;
+        transform-origin: center;
+        display: none;
     }
 
   }

@@ -153,7 +153,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
       // console.log($(window).scrollTop())
       if ($(window).scrollTop() < welcomheight){
         console.log("welcome")
-        sectiontotal = welcomheight
+        sectiontotal = welcomheight 
         wheelrot = scale($(window).scrollTop(), 0, sectiontotal, 3, 407)
         console.log(sectiontotal)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0",
@@ -306,7 +306,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
       $(".welcome").click(function(){
         $('html,body').animate({
-            scrollTop: $(".welcome-section").offset().top - 90
+            scrollTop: $(".welcome-section").offset().top - 120
          }, 1500);
       })
 
