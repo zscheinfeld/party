@@ -138,13 +138,13 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
     var wheelrot = 0
     var scrollheight = $(document).height() 
-    var welcomheight = $(".welcome-section").prop("scrollHeight")
-    var scheduleheight = $(".schedule-section").prop("scrollHeight")
-    var travelheight = $(".travel-section").prop("scrollHeight")
-    var transportheight = $(".transport-section").prop("scrollHeight")
-    var dressheight = $(".dress-section").prop("scrollHeight")
-    var registryheight = $(".registry-section").prop("scrollHeight")
-    var rsvpheight = $(".rsvp-section").prop("scrollHeight")
+    var welcomheight = $(".welcome-section").prop("scrollHeight") + 30
+    var scheduleheight = $(".schedule-section").prop("scrollHeight") 
+    var travelheight = $(".travel-section").prop("scrollHeight") 
+    var transportheight = $(".transport-section").prop("scrollHeight") 
+    var dressheight = $(".dress-section").prop("scrollHeight") 
+    var registryheight = $(".registry-section").prop("scrollHeight") 
+    var rsvpheight = $(".rsvp-section").prop("scrollHeight") 
     console.log(".welcome-height" + welcomheight)
     var sectiontotal;
 
@@ -282,43 +282,43 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
       $(".registry").click(function(){
         $('html,body').animate({
-            scrollTop: $(".registry-section").offset().top - 120
+            scrollTop: $(".registry-section").offset().top - 90
          }, 1500);
       })
 
       $(".schedule").click(function(){
         $('html,body').animate({
-            scrollTop: $(".schedule-section").offset().top - 120
+            scrollTop: $(".schedule-section").offset().top - 90
          }, 1500);
       })
 
       $(".transport").click(function(){
         $('html,body').animate({
-            scrollTop: $(".transport-section").offset().top - 120
+            scrollTop: $(".transport-section").offset().top - 90
          }, 1500);
       })
 
       $(".dress").click(function(){
         $('html,body').animate({
-            scrollTop: $(".dress-section").offset().top - 120
+            scrollTop: $(".dress-section").offset().top - 90
          }, 1500);
       })
 
       $(".welcome").click(function(){
         $('html,body').animate({
-            scrollTop: $(".welcome-section").offset().top - 120
+            scrollTop: $(".welcome-section").offset().top - 90
          }, 1500);
       })
 
       $(".travel").click(function(){
         $('html,body').animate({
-            scrollTop: $(".travel-section").offset().top - 120
+            scrollTop: $(".travel-section").offset().top - 90
          }, 1500);
       })
 
       $(".rsvp").click(function(){
         $('html,body').animate({
-            scrollTop: $(".rsvp-section").offset().top - 120
+            scrollTop: $(".rsvp-section").offset().top - 90
          }, 1500);
       })
 
@@ -341,6 +341,9 @@ function scale (number, inMin, inMax, outMin, outMax) {
         //
         ui.position.left += __recoupLeft;
         ui.position.top += __recoupTop;
+        $(this).css({
+          "z-index":`${zindextrack}`
+        })
     },
     start: function (event, ui) {
         //resize bug fix ui drag
@@ -367,6 +370,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
       zindextrack = 100
 
       $(".wildcardpic").mousedown(function(){
+        console.log("z-iindex")
         zindextrack = zindextrack + 1
         $(this).css({
           "z-index":`${zindextrack}`

@@ -1137,9 +1137,9 @@ a:hover{
         width: 100%;
         line-height:  calc(var(--sliceheight) - 10px);
         padding-top: 1px;
-        padding-right:05px;
+        padding-right:15px;
         padding-bottom: 1px;
-        padding-left: 25px;
+        padding-left: 15px;
         /* height: 20px; */
         font-family: Opposit;
         font-size: 18px;
@@ -1422,6 +1422,7 @@ a:hover{
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
+        padding-bottom: 80vh;
     }
 
     p{
@@ -1439,6 +1440,15 @@ a:hover{
         height: 15px;
         margin-left: -20px;
         padding-left: 40px;
+    }
+
+    .section{
+        min-height: 0vh;
+        padding-bottom: 50px;
+    }
+
+    .welcome-section{
+        min-height: 100vh;
     }
 
   }
