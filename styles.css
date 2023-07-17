@@ -392,6 +392,7 @@ align-items: center;
 .span-click:hover{
     cursor: pointer;
     text-decoration: black wavy underline;
+    -webkit-text-decoration: black wavy underline;
     text-underline-offset: 5px;
 }
 
@@ -1143,7 +1144,7 @@ padding-top: 10px;
 
 a{
     color: black;
-    text-decoration: #FF0000 wavy underline;
+    -webkit-text-decoration: #FF0000 wavy underline;
     /* text-decoration: none; */
     text-decoration-skip-ink: none;
     height: 2em;
@@ -1157,6 +1158,7 @@ a:hover{
     color: black;
     /* background-color: #85CEF2; */
     text-decoration: #FF0000 wavy underline;
+    -webkit-text-decoration: #FF0000 wavy underline;
     text-decoration-skip-ink: none;
     height: 2em;
     overflow: visible;
