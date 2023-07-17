@@ -790,11 +790,13 @@ p{
 }
 
 .header-jenna-gradient{
+    transition: background-color .7s ease-in-out;
     background: #f6d8c7;
     background: linear-gradient(0deg, #f6d8c7 0%, rgba(255,208,231,1) 100%);
 }
 
 .header-zach-gradient{
+    transition: background-color .7s ease-in-out;
     background: rgb(176, 227, 255);
     background: linear-gradient(0deg, #cbe9fc 0%, rgb(176, 227, 255) 100%);
 }
