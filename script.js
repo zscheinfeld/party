@@ -180,7 +180,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
         console.log("welcome")
         sectiontotal = welcomheight 
         wheelrot = scale($(window).scrollTop(), 0, sectiontotal, 3, 407)
-        console.log(sectiontotal)
+      
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0",
       })
       }
@@ -189,39 +189,39 @@ function scale (number, inMin, inMax, outMin, outMax) {
         sectiontotal = welcomheight + scheduleheight
         wheelrot = scale($(window).scrollTop(), welcomheight, sectiontotal, 407, 812)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
-        console.log(sectiontotal)
+     
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight + travelheight){
         sectiontotal = welcomheight + scheduleheight + travelheight
         wheelrot = scale($(window).scrollTop(), welcomheight + scheduleheight, sectiontotal, 812, 1217)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
-        console.log(sectiontotal)
+
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight + travelheight + transportheight){
         sectiontotal = welcomheight + scheduleheight + travelheight + transportheight
         wheelrot = scale($(window).scrollTop(), welcomheight + scheduleheight + travelheight, sectiontotal, 1217, 1622)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
-        console.log(sectiontotal)
+
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight + travelheight + transportheight + dressheight){
         sectiontotal = welcomheight + scheduleheight + travelheight + transportheight + dressheight
         wheelrot = scale($(window).scrollTop(), welcomheight + scheduleheight + travelheight + transportheight, sectiontotal, 1622, 2027)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
-        console.log(sectiontotal)
+   
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight + travelheight + transportheight + dressheight + registryheight){
         sectiontotal = welcomheight + scheduleheight + travelheight + transportheight + dressheight + registryheight
         wheelrot = scale($(window).scrollTop(), welcomheight + scheduleheight + travelheight + transportheight + dressheight, sectiontotal, 2027, 2432)
         $(".wheel").css({"transform":`rotate(${wheelrot}deg)`, "transition-duration":"0"})
-        console.log(sectiontotal)
+
       }
 
       else if ($(window).scrollTop() < welcomheight + scheduleheight + travelheight + transportheight + dressheight + registryheight + rsvpheight){
-        console.log("rsvp zach")
+      
       }
         
         
@@ -269,9 +269,16 @@ function scale (number, inMin, inMax, outMin, outMax) {
       // });
 
       var jennaon = 0;
-      var iszach = 0;
+      var zachon = 0;
 
-      function bgswitch(){
+      function bgjennaswitch(){
+        zachon = 0;
+        $(".nav").removeClass("zach-nav")
+        $(".nav-container").removeClass("zach-nav")
+        $(".background-jenna-on").removeClass("background-zach-gradient")
+        console.log("remove blue , add pink")
+        $(".background-jenna-on").addClass("background-jenna-gradient")
+        $(".header-jenna-bg").removeClass("header-zach-gradient")
         if (jennaon == 0){
           $(".nav-container").addClass("jenna-nav")
           $(".nav").addClass("jenna-nav")
@@ -279,53 +286,98 @@ function scale (number, inMin, inMax, outMin, outMax) {
           $(".footer").addClass("footer-jenna")
           $(".background-jenna").addClass("background-jenna-on-opacity")
           $(".header-jenna-oppacity").addClass("background-jenna-on-opacity")
+          $(".header-jenna-bg").addClass("header-jenna-gradient")
           jennaon = 1
         }
         else{
+          $(".background-jenna-on").removeClass("background-jenna-gradient")
           $(".nav-container").removeClass("jenna-nav")
           $(".nav").removeClass("jenna-nav")
           $(".footer-container").removeClass("footer-jenna")
           $(".footer").removeClass("footer-jenna")
           $(".background-jenna").removeClass("background-jenna-on-opacity")
+          $(".header-jenna-bg").removeClass("header-jenna-gradient")
           $(".header-jenna-oppacity").removeClass("background-jenna-on-opacity")
+          // $(".footer-jenna").css("background-color","rgba(255,255,255,1)")
           jennaon = 0
+        }
+      }
+
+      function zachswitch(){
+        jennaon = 0;
+        console.log("remove pink , add blue")
+        $(".nav").removeClass("jenna-nav")
+        $(".nav-container").removeClass("jenna-nav")
+        $(".background-jenna-on").removeClass(".background-jenna-gradient")
+        $(".header-jenna-bg").removeClass("header-jenna-gradient")
+        $(".background-jenna-on").addClass("background-zach-gradient")
+        $(".footer").removeClass("footer-jenna")
+        $(".footer-container").removeClass("footer-jenna")
+        if (zachon == 0){
+          $(".nav-container").addClass("zach-nav")
+          $(".nav").addClass("zach-nav")
+          $(".background-jenna").addClass("background-jenna-on-opacity")
+          $(".header-jenna-oppacity").addClass("background-jenna-on-opacity")
+          $(".header-jenna-bg").addClass("header-zach-gradient")
+          
+          // $(".footer-container").addClass("footer-zach")
+          // $(".footer").addClass("footer-zach")
+          // $(".background-zach").addClass("background-zach-on-opacity")
+          // $(".header-zach-oppacity").addClass("background-zach-on-opacity")
+          zachon = 1
+        }
+        else{
+          $(".nav-container").removeClass("zach-nav")
+          $(".nav").removeClass("zach-nav")
+          $(".background-jenna").removeClass("background-jenna-on-opacity")
+          $(".header-jenna-bg").removeClass("header-zach-gradient")
+          $(".header-jenna-oppacity").removeClass("background-jenna-on-opacity")
+          // $(".footer-container").removeClass("footer-zach")
+          // $(".footer").removeClass("footer-zach")
+          // $(".background-zach").removeClass("background-zach-on-opacity")
+          // $(".header-zach-oppacity").removeClass("background-zach-on-opacity")
+          zachon = 0
         }
       }
 
       $(".nav-left").click(function(){
         // $(".footer-jenna").css("background-color","rgb(246,232,110)")
-        $(".background-jenna-on").css("background","linear-gradient(0deg, rgba(246,232,110,1) 0%, rgba(255,208,231,1) 100%)")
-        $(".footer-jenna").css("background-color","rgba(246,232,110,1)")
-        bgswitch();
+        // $(".background-jenna-on").css("background","linear-gradient(0deg, rgba(246,232,110,1) 0%, rgba(255,208,231,1) 100%)")
+        // $(".footer-jenna").css("background-color","rgba(246,232,110,1)")
+        bgjennaswitch();
       });
 
       $(".nav-right").click(function(){
-        $(".background-jenna-on").css("background","linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(149,255,255,1) 100%)")
-        bgswitch();
-        $(".footer-jenna").css("background-color","rgba(255,255,255,1)")
+        
+        // bgjennaswitch();
+        
+        zachswitch();
       });
 
       $(".registry").click(function(){
         $('html,body').animate({
-            scrollTop: $(".registry-section").offset().top - 90
+            scrollTop: welcomheight + scheduleheight + travelheight + transportheight + dressheight
          }, 1500);
       })
 
       $(".schedule").click(function(){
+        console.log(($(".schedule-section").offset().top))
         $('html,body').animate({
-            scrollTop: $(".schedule-section").offset().top - 90
+            scrollTop: welcomheight 
          }, 1500);
       })
 
       $(".transport").click(function(){
+        console.log($(".transport-section").offset().top)
         $('html,body').animate({
-            scrollTop: $(".transport-section").offset().top - 90
+            scrollTop: welcomheight + scheduleheight + travelheight
          }, 1500);
       })
 
       $(".dress").click(function(){
         $('html,body').animate({
-            scrollTop: $(".dress-section").offset().top - 90
+            scrollTop: welcomheight + scheduleheight + travelheight + transportheight
+            
          }, 1500);
       })
 
@@ -337,13 +389,13 @@ function scale (number, inMin, inMax, outMin, outMax) {
 
       $(".travel").click(function(){
         $('html,body').animate({
-            scrollTop: $(".travel-section").offset().top - 90
+            scrollTop: welcomheight + scheduleheight
          }, 1500);
       })
 
       $(".rsvp").click(function(){
         $('html,body').animate({
-            scrollTop: $(".rsvp-section").offset().top - 90
+            scrollTop: welcomheight + scheduleheight + travelheight + transportheight + dressheight + registryheight
          }, 1500);
       })
 
