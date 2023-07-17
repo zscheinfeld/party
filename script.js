@@ -96,7 +96,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
       
       if (width < 720){
         imgarrayshuff = shuffle(imgarray)
-        for (x=0; x <15; x++){
+        for (x=0; x <16; x++){
           $(`.img${x}`).children().attr('src', `wildcard/0${imgarrayshuff[x]}.png`)
           varleft = randomIntFromInterval(-40, 40);
           imageroot.style.setProperty(`--animation-left-${x}`, varleft +'vw');
@@ -114,7 +114,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
       
       else{
         imgarrayshuff = shuffle(imgarray)
-        for (x=0; x <15; x++){
+        for (x=0; x <16; x++){
           $(`.img${x}`).children().attr('src', `wildcard/0${imgarrayshuff[x]}.png`)
           varleft = randomIntFromInterval(-40, 40);
           imageroot.style.setProperty(`--animation-left-${x}`, varleft +'vw');
