@@ -86,7 +86,7 @@ function scale (number, inMin, inMax, outMin, outMax) {
     
     var imageroot = document.querySelector(':root');
 
-    for (x=0; x<100 ; x++){
+    for (x=0; x<164 ; x++){
       imgarray[x] = x
     }
 
