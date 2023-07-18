@@ -22,6 +22,10 @@
     display: block;
 }
 
+.intro{
+    height: fit-content
+}
+
 .wildcard-close-container{
     position: fixed;
     display: flex;
